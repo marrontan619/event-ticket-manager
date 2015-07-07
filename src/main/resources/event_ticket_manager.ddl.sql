@@ -1,5 +1,5 @@
 -- Project Name : event_ticket_manager
--- Date/Time    : 2015/07/06 16:18:14
+-- Date/Time    : 2015/07/07 17:06:26
 -- Author       : marrontan619
 -- RDBMS Type   : MySQL
 -- Application  : A5:SQL Mk-2
@@ -20,8 +20,10 @@ create table loan (
   , borrower_id VARCHAR(32) not null comment '借用者ID'
   , cleared_flag BOOLEAN default false not null comment '精算済みフラグ'
   , note TEXT comment '備考'
-  , constraint loan_PKC primary key (loan_id,ticket_id,lender_id,borrower_id)
+  , constraint loan_PKC primary key (loan_id)
 ) comment '貸借' ;
+
+alter table loan add unique UQ_loan_1 (ticket_id,lender_id,borrower_id) ;
 
 -- チケット
 create table ticket (
@@ -42,7 +44,6 @@ create table event (
   , event_date DATETIME comment '日時'
   , location VARCHAR(128) comment '場所'
   , url VARCHAR(512) comment 'URL'
-  , participant_id TEXT comment '参加者ID'
   , description TEXT comment '説明'
   , constraint event_PKC primary key (event_id)
 ) comment 'イベント' ;
@@ -54,4 +55,3 @@ create table users (
   , user_name VARCHAR(128) not null comment '名前'
   , constraint users_PKC primary key (id)
 ) comment 'ユーザー' ;
-

@@ -12,12 +12,6 @@ public class LoginController {
     @Autowired
     UsersRepository userRepository;
 
-//    @RequestMapping(value = "/login")
-//    public String login() {
-//        List<Users> user = userRepository.findByUserName("aoki");
-//        return "login";
-//    }
-
     @RequestMapping(value = "/top")
     public String top() {
         return "top";
