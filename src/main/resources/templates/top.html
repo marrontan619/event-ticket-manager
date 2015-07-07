@@ -8,6 +8,13 @@
     </head>
     <body>
         <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+
+        <ul>
+            <li th:each="event : ${events}" th:object="${event}">
+                <span th:text="*">hoge</span>
+            </li>
+        </ul>
+
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
