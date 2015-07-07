@@ -11,8 +11,9 @@
 
         <ul>
             <li th:each="event : ${events}" th:object="${event}">
-                <span th:text="*">hoge</span>
+                <span th:text="*{eventName}">hoge</span>
             </li>
+            <li th:text="${events.get(0).eventName}">id</li>
         </ul>
 
         <form th:action="@{/logout}" method="post">

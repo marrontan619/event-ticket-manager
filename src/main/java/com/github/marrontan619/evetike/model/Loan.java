@@ -43,4 +43,52 @@ public class Loan {
         this.borrowerId = borrowerId;
         this.clearedFlag = cleardFlag;
     }
+
+    public int getLoanId() {
+        return loanId;
+    }
+
+    public void setLoanId(int loanId) {
+        this.loanId = loanId;
+    }
+
+    public int getTicketId() {
+        return ticketId;
+    }
+
+    public void setTicketId(int ticketId) {
+        this.ticketId = ticketId;
+    }
+
+    public String getLenderId() {
+        return lenderId;
+    }
+
+    public void setLenderId(String lenderId) {
+        this.lenderId = lenderId;
+    }
+
+    public String getBorrowerId() {
+        return borrowerId;
+    }
+
+    public void setBorrowerId(String borrowerId) {
+        this.borrowerId = borrowerId;
+    }
+
+    public boolean isClearedFlag() {
+        return clearedFlag;
+    }
+
+    public void setClearedFlag(boolean clearedFlag) {
+        this.clearedFlag = clearedFlag;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
 }

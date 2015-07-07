@@ -22,4 +22,20 @@ public class ParticipantPK implements Serializable {
         this.participantId = participantId;
         this.eventId = eventId;
     }
+
+    public String getParticipantId() {
+        return participantId;
+    }
+
+    public void setParticipantId(String participantId) {
+        this.participantId = participantId;
+    }
+
+    public int getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(int eventId) {
+        this.eventId = eventId;
+    }
 }

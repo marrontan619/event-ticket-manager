@@ -25,4 +25,20 @@ public class TicketPK implements Serializable {
         this.ticketId = ticketId;
         this.eventId = eventId;
     }
+
+    public int getTicketId() {
+        return ticketId;
+    }
+
+    public void setTicketId(int ticketId) {
+        this.ticketId = ticketId;
+    }
+
+    public int getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(int eventId) {
+        this.eventId = eventId;
+    }
 }
