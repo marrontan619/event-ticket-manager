@@ -7,7 +7,7 @@
         <title>Hello World!</title>
     </head>
     <body>
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <h1 th:inline="text">Regist</h1>
 
         <ul>
             <li th:each="event : ${events}" th:object="${event}">
@@ -16,7 +16,7 @@
         </ul>
 
         <div>
-            <a th:href="@{/event?action=new}">
+            <a th:href="@{/event?action=regist}">
                 <button type="button">Regist</button>
             </a>
         </div>
