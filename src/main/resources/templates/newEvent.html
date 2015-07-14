@@ -5,22 +5,44 @@
   xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
     <head th:include="common/header"></head>
     <body>
-        <h1 th:inline="text">Regist</h1>
-
-        <ul>
-            <li th:each="event : ${events}" th:object="${event}">
-                <span th:text="*{eventName}">hoge</span>
-            </li>
-        </ul>
-
-        <div>
-            <a th:href="@{/event?action=regist}">
-                <button type="button">Regist</button>
-            </a>
-        </div>
-
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+        <h2>New Event</h2>
+        <form action="void(0);" th:action="@{/event/regist}" th:object="${newEventForm}" th:method="POST">
+            <div>
+                <label>
+                    <span>Event Name:</span>
+                    <input th:type="text" th:field="*{eventName}" />
+                </label>
+            </div>
+            
+            <div>
+                <label>
+                    <span>Event Date:</span>
+                    <input th:type="datetime" th:field="*{eventDate}" />
+                </label>
+            </div>
+            
+            <div>
+                <label>
+                    <span>Location:</span>
+                    <input th:type="text" th:field="*{location}" />
+                </label>
+            </div>
+            
+            <div>
+                <label>
+                    <span>Description:</span>
+                    <input th:type="text" th:field="*{description}" />
+                </label>
+            </div>
+            
+            <div>
+                <label>
+                    <span>URL:</span>
+                    <input th:type="text" th:field="*{url}" />
+                </label>
+            </div>
+            
+            <button th:type="submit">Regist</button>
         </form>
     </body>
 </html>

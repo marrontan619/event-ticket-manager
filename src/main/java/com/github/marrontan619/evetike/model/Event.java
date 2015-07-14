@@ -33,12 +33,6 @@ public class Event {
     @Column(name = "description")
     private String description;
 
-    protected Event() {};
-
-    public Event(String eventName) {
-        this.eventName = eventName;
-    }
-
     public int getEventId() {
         return eventId;
     }
