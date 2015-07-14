@@ -2,8 +2,11 @@ package com.github.marrontan619.evetike.model.form;
 
 import java.util.Date;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class EventForm {
 
+    @NotEmpty
     private String eventName;
     private Date eventDate;
     private String location;
